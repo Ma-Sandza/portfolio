@@ -155,6 +155,9 @@ header p {
   .header {
     padding: 0 5em;
     background-image: url("../../src/pexels-ali-arapoğlu-3022076.jpg");
+    height: max-content !important;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .header .header__info {
     display: flex;

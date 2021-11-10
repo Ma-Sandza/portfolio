@@ -1,0 +1,91 @@
+#nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding: 10px 25px;
+    width: 100%;
+    
+    #nav__bar{
+        font-size: 30px;
+        color: #dee8f0;
+    }
+    #nav__links{
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+        top: 40px;
+        width: 100%;
+        left: 0;
+        ul{
+            padding: 0;
+            width: 100%;
+            flex-direction: column;
+            li{
+                list-style: none;
+                padding: 0;
+                a{
+                    display: flex;
+                    justify-content: center;
+                    padding: 30px 0;
+                    background-color: #273748;
+                    color: #dee8f0;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    &:hover{
+                        background-color: #dee8f0;
+                        color: #273748;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        
+    }
+    #nav__button{
+
+        #nav__bar{
+            width: 30px;
+            height: 6px;
+            margin: 5px;
+            display: flex;
+            background-color: #dee8f0;
+            border-radius: 10px;
+        }
+    }
+}
+@media (min-width: 700px) {
+    #nav__links{
+        position: static !important;
+        width: max-content !important;
+        ul{
+            display: flex !important;
+            flex-direction: row !important;
+            width: max-content !important;
+            li{
+                a{
+                    padding: 10px !important;
+                    display: flex;
+                    background-color: black !important;
+                    font-size: 1.4rem !important;
+                    &:hover{
+                        color: white !important;
+                    }
+                   
+    
+                }
+            } 
+        }
+
+    }
+    #nav__button{
+        display: none;
+    }
+    #nav{
+        padding: 0px 25px !important;
+    }
+}

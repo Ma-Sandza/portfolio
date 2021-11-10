@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Sandile Moremedi</title>
+</head>
+<body>
+    <nav id="nav">
+        <span>S.Moremedi</span>
+        <div id="nav__links">
+            <ul id="ul" style="display: none;">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="nav__button">
+            <span id="nav__bar"></span>
+            <span id="nav__bar"></span>
+            <span id="nav__bar"></span>
+        </div>
+    </nav>
+    
+    <header class="header" id="home">
+        <div class="header__info">
+            <span>Jus' A Mere Dev'</span>
+            <p>
+                I am Sandile Moremedi, Web Developer, Freelancer, Music Fanatic, Writer and Window Shopper by Day, Anime Addict by day fall.
+            </p>
+            <p>
+                So welcome to my home page, feel welcome to explore who I am.
+            </p>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+
+        <h2>About</h2>
+        <p>
+            Hi, I'm Sandile Moremedi. A Web developer and much more than that. Based in South Africa, a place where there are multi talented people from different backgrouns and multiple personalities, so I'm well fitted to work with different kinds of people and clients.
+        </p>
+
+        <p>
+            My journey started during the pandemic and honestly speaking, it's been challenging because I'm a self-taught developer and that is one of the most hardest truth I have ever face and yet I'm proud of the circumstance I had.
+        </p>
+
+        <p>
+            Luckily with all that I learned the bases of responsibility and how to use the resources I have to the fullest. And I feel that that's what sets me apart from most CS and IT students out there because self-taught programmers teach themselves how to work with what they have.
+        </p>
+
+        <p>
+            And with all that said I have to share with you all the work I have done so far as a developer.
+        </p>
+    </section>
+    <section id="work" class="work">
+        <h2>Work</h2>
+        <div class="work__sections">
+        <div class="left">
+            <h3>Freelancing</h3>
+                <a href="">
+                    <div class="sample-image freelancing">
+                        <div class="three-buttons">
+                            <span class="circle circle__green"></span>
+                            <span class="circle circle__yellow"></span>
+                            <span class="circle circle__red"></span>
+                        </div>
+                        <div class="image"><img src="./src/screencapture-mr-young-joey-netlify-app-songs-html-2021-11-09-23_40_29.png" class="img" width="100%" alt=""></div>
+                    </div>
+                </a>
+                <p>This is one of the people I have worked with that say that they are satisfied with product they got.</p>
+                
+                        </div>
+                        <div class="center">
+                <h3>Practise Stuff</h3>
+                <div class="sample-image">
+                    <div class="three-buttons">
+                        <span class="circle circle__green"></span>
+                        <span class="circle circle__yellow"></span>
+                        <span class="circle circle__red"></span>
+                    </div>
+                    <div class="image"><img src="src/screencapture-sunny-side-masandza-netlify-app-2021-10-21-15_00_14.png"class="img" width="100%" alt=""></div>
+                </div>
+                <p>These are the projects that I've completed on Frontendmentor Profile.</p>
+                        </div>
+                
+                        <div class="right">
+                <h3>Personal&nbsp;Project</h3>
+                <div class="sample-image">
+                    <div class="three-buttons">
+                        <span class="circle circle__green"></span>
+                        <span class="circle circle__yellow"></span>
+                        <span class="circle circle__red"></span>
+                    </div>
+                    <div class="image"><img src="src/screencapture-127-0-0-1-5501-index-html-2021-11-08-17_53_59.png" width="100%" class="img" alt=""></div>
+                </div>
+                <p>This is a sample of one of the projects I am working on.</p>
+                <p>My plans for all my projects is to learn all the concepts of the things I love and put them in a website for people to learn about.</p>
+                        </div>
+            </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>
+            In case you suggest on working with me you can leave a message in the form below and I will get back to you as soon as humanly possible. Even if it's not work you can still contact me.
+        </p>
+
+        <form action="/thank-you.html" class="form" onclick="handleSubmisssion()" name="contact" method="POST" data-netlify="true">
+            <p class="name">
+                <label for="name">
+                    Name & Surname
+                <input type="text" name="name" id="name" required placeholder="Enter Here...">
+            </label>
+            </p>
+
+            <p class="email">
+                <label for="email">
+                    Email
+                <input type="email" name="email" id="email" required placeholder="Enter Here...">
+            </label>
+            </p>
+
+            <p class="textarea">
+                <label for="comment">
+                    Comments
+                <textarea name="comment" id="comment" required placeholder="Enter Here..." cols="30" rows="3"></textarea>
+            </label>
+            </p>
+
+            <p><button id="submit" type="submit">Send</button></p>
+        </form>
+    </section>
+
+    <footer>
+        <span>Jus' A Mere Dev'</span>
+        <a href="https://twitter.com/masandza_1" class="footer__links">
+            <img src="src/twitter.svg" width="100%" alt="">
+        </a>
+        <a href="www.linkedin.com/in/sandilemoremedi70" class="footer__links">
+            <img src="src/linkedin.svg" width="100%" alt="">
+        </a>
+        <a href="https://github.com/Ma-Sandza" class="footer__links">
+            <img src="src/github.svg" width="100%" alt="">
+        </a>
+    </footer>
+</body>
+</html>

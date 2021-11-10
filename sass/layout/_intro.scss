@@ -1,0 +1,55 @@
+@import '../utils/variables';
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-height: 100vh;
+    padding: 0 60px;
+    color: white;
+    background-image: url(../../src/pexels-luis-miguel-p-bonilla-3583877.jpg);
+    background-size: contain;
+    .header__info{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    span{
+        margin-top: 30px;
+        font-family: $Dancing-Script;
+        font-size: 6em;
+    }
+    img{
+        height: 30vh;
+        width: 30vh;
+    }
+    p{
+        font-size: 1.6rem;
+        line-height: 1.5;
+        text-align: center;
+        font-family: $Kanit;
+        padding-top: 30px;
+    }
+}
+@media (max-width: 599px) {
+    .header{
+        padding: 0 5em;
+        background-image: url('../../src/pexels-ali-arapoğlu-3022076.jpg');
+        .header__info{
+            display: flex;
+            width: 100% !important;
+            justify-content: stretch !important;
+            align-items: stretch !important;
+            span{
+                font-size: 3em;
+            }
+        }
+        // p{
+        //     font-size: 1rem !important;
+        // }
+    }
+}
+
+
+

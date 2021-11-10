@@ -1,0 +1,402 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Kanit&family=Roboto+Slab&display=swap");
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body h1, body h2, body h3, body h4 {
+  text-align: center;
+  font-family: "Dancing Script", sans-serif;
+}
+
+body span {
+  font-family: "Dancing Script", sans-serif;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 10px 25px;
+  width: 100%;
+}
+
+#nav #nav__bar {
+  font-size: 30px;
+  color: #dee8f0;
+}
+
+#nav #nav__links {
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  top: 40px;
+  width: 100%;
+  left: 0;
+}
+
+#nav #nav__links ul {
+  padding: 0;
+  width: 100%;
+  flex-direction: column;
+}
+
+#nav #nav__links ul li {
+  list-style: none;
+  padding: 0;
+}
+
+#nav #nav__links ul li a {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  background-color: #273748;
+  color: #dee8f0;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#nav #nav__links ul li a:hover {
+  background-color: #dee8f0;
+  color: #273748;
+  text-decoration: underline;
+}
+
+#nav #nav__button #nav__bar {
+  width: 30px;
+  height: 6px;
+  margin: 5px;
+  display: flex;
+  background-color: #dee8f0;
+  border-radius: 10px;
+}
+
+@media (min-width: 700px) {
+  #nav__links {
+    position: static !important;
+    width: max-content !important;
+  }
+  #nav__links ul {
+    display: flex !important;
+    flex-direction: row !important;
+    width: max-content !important;
+  }
+  #nav__links ul li a {
+    padding: 10px !important;
+    display: flex;
+    background-color: black !important;
+    font-size: 1.4rem !important;
+  }
+  #nav__links ul li a:hover {
+    color: white !important;
+  }
+  #nav__button {
+    display: none;
+  }
+  #nav {
+    padding: 0px 25px !important;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-height: 100vh;
+  padding: 0 60px;
+  color: white;
+  background-image: url(../../src/pexels-luis-miguel-p-bonilla-3583877.jpg);
+  background-size: contain;
+}
+
+header .header__info {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+header span {
+  margin-top: 30px;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 6em;
+}
+
+header img {
+  height: 30vh;
+  width: 30vh;
+}
+
+header p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Kanit", sans-serif;
+  padding-top: 30px;
+}
+
+@media (max-width: 599px) {
+  .header {
+    padding: 0 5em;
+    background-image: url("../../src/pexels-ali-arapoğlu-3022076.jpg");
+  }
+  .header .header__info {
+    display: flex;
+    width: 100% !important;
+    justify-content: stretch !important;
+    align-items: stretch !important;
+  }
+  .header .header__info span {
+    font-size: 3em;
+  }
+}
+
+#about {
+  padding: 40px 10em;
+  background-color: black;
+  color: white;
+  background-image: url(../../src/pexels-pepe-caspers-5411700.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#about h2 {
+  font-family: "Roboto Slab", sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 1.4em !important;
+}
+
+#about p {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+@media (max-width: 599px) {
+  #about {
+    padding: 20px 5em;
+  }
+  #about p {
+    font-size: 1rem !important;
+  }
+}
+
+.work {
+  padding: 40px 40px;
+  background-color: black;
+  color: white;
+}
+
+.work h2 {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+}
+
+.work h3 {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.work p {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.work .left, .work .center, .work .right {
+  margin-top: 50px;
+}
+
+.sample-image {
+  border-top: 30px solid #ddb6b6 !important;
+  border: 10px solid #ddb6b6;
+  border-radius: 10px;
+  position: relative;
+  height: 40vh;
+}
+
+.sample-image img {
+  display: flex;
+}
+
+.sample-image .image {
+  height: 100%;
+  overflow: hidden;
+}
+
+.sample-image .image .img:hover {
+  animation-name: top-move;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.sample-image .three-buttons {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  left: -4px;
+}
+
+.sample-image .three-buttons .circle {
+  width: 10px;
+  height: 10px;
+  border: 1px white solid;
+  display: flex;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: green;
+}
+
+.sample-image .three-buttons .circle__green {
+  background-color: green;
+}
+
+.sample-image .three-buttons .circle__yellow {
+  background-color: yellow;
+}
+
+.sample-image .three-buttons .circle__green {
+  background-color: red;
+}
+
+@keyframes top-move {
+  0% {
+    position: relative;
+    top: 0;
+  }
+  25% {
+    position: relative;
+    top: -100%;
+  }
+  50% {
+    position: relative;
+    top: -200%;
+  }
+  75% {
+    position: relative;
+    top: -300%;
+  }
+  100% {
+    position: relative;
+    top: -400%;
+  }
+}
+
+@media (min-width: 700px) {
+  .work__sections {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .work__sections .left, .work__sections .right, .work__sections .center {
+    width: 33%;
+    padding: 10px 40px;
+  }
+}
+
+.contact {
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../../src/pexels-nicolas-postiglioni-421129.jpg);
+  background-size: cover;
+  color: white;
+}
+
+.contact h2 {
+  font-family: "Anton", sans-serif;
+}
+
+.contact p {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-family: "Roboto Slab", sans-serif;
+  padding-bottom: 30px;
+}
+
+.contact .form {
+  background-image: url(../../src/241b12ed4501adba707a27828f5117a6.jpg);
+  background-size: contain;
+  max-width: 50vw;
+  padding: 20px;
+  border: 3px solid #333;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact .form p {
+  font-size: 1.4rem;
+}
+
+.contact .form p label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.contact .form p label input {
+  padding: 10px;
+}
+
+.contact .form p button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 599px) {
+  .form {
+    max-width: 70vw !important;
+  }
+  .contact {
+    background-position: center;
+  }
+}
+
+footer {
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer span {
+  color: white;
+  font-size: 1.7em;
+}
+
+footer img {
+  height: 40px;
+  color: white;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

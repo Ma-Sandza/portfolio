@@ -1,0 +1,23 @@
+@import './sass/utils/_variables.scss';
+h1{
+    text-align: center;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Kanit', sans-serif;
+}
+img{
+    height: 50vh;
+    width: 50vh;
+}
+
+button{
+    margin-top: 40px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+}

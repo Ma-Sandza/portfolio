@@ -8,3 +8,9 @@ navButton.addEventListener("click", ()=>{
         ul.style.display = "flex";
     }
 })
+
+document.onclick = function(e){
+    if(e.target.id !== "nav__button" && e.target.id !== "nav__links"){
+        ul.style.display = "none";
+    }
+}

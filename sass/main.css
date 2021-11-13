@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Kanit&family=Roboto+Slab&display=swap");
 *, *::after, *::before {
   box-sizing: border-box;
@@ -15,13 +14,33 @@ body {
   padding: 0;
 }
 
-body h1, body h2, body h3, body h4 {
+h1, h2, h3 {
   text-align: center;
+}
+
+#nav a {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+span, h1 {
   font-family: "Dancing Script", sans-serif;
 }
 
-body span {
-  font-family: "Dancing Script", sans-serif;
+h2 {
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Kanit", sans-serif;
+}
+
+p {
+  font-family: "Roboto Slab", sans-serif;
+}
+
+label {
+  font-family: "Anton", sans-serif;
 }
 
 #nav {
@@ -32,6 +51,15 @@ body span {
   color: white;
   padding: 10px 25px;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#nav span {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 #nav #nav__bar {
@@ -46,7 +74,7 @@ body span {
   align-items: center;
   flex-direction: column;
   display: flex;
-  top: 40px;
+  top: 50px;
   width: 100%;
   left: 0;
 }
@@ -121,7 +149,8 @@ header {
   min-height: 100vh;
   padding: 0 60px;
   color: white;
-  background-image: url(../../src/pexels-luis-miguel-p-bonilla-3583877.jpg);
+  position: relative;
+  background-image: url(../../src/pexels-luis-miguel-p-bonilla-3583877.webp);
   background-size: contain;
 }
 
@@ -133,9 +162,9 @@ header .header__info {
 }
 
 header span {
-  margin-top: 30px;
-  font-family: "Dancing Script", sans-serif;
+  margin-top: 50px;
   font-size: 6em;
+  text-align: center;
 }
 
 header img {
@@ -147,14 +176,13 @@ header p {
   font-size: 1.6rem;
   line-height: 1.5;
   text-align: center;
-  font-family: "Kanit", sans-serif;
   padding-top: 30px;
 }
 
 @media (max-width: 599px) {
   .header {
     padding: 0 5em;
-    background-image: url("../../src/pexels-ali-arapoğlu-3022076.jpg");
+    background-image: url("../../src/pexels-eunice-lui-4151043.webp");
     height: max-content !important;
     background-repeat: no-repeat;
     background-size: cover;
@@ -174,13 +202,16 @@ header p {
   padding: 40px 10em;
   background-color: black;
   color: white;
-  background-image: url(../../src/pexels-pepe-caspers-5411700.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  background-image: url(../../src/pexels-pepe-caspers-5411700.webp);
   background-size: cover;
   background-position: center;
 }
 
 #about h2 {
-  font-family: "Roboto Slab", sans-serif;
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 1.4em !important;
@@ -190,7 +221,6 @@ header p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.4;
-  font-family: "Roboto Slab", sans-serif;
 }
 
 @media (max-width: 599px) {
@@ -203,22 +233,12 @@ header p {
 }
 
 .work {
-  padding: 40px 40px;
+  padding: 60px 40px;
   background-color: black;
   color: white;
 }
 
-.work h2 {
-  font-family: "Kanit", sans-serif;
-  text-transform: uppercase;
-}
-
-.work h3 {
-  font-family: "Roboto Slab", sans-serif;
-}
-
 .work p {
-  font-family: "Kanit", sans-serif;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -232,21 +252,23 @@ header p {
   border: 10px solid #ddb6b6;
   border-radius: 10px;
   position: relative;
-  height: 40vh;
+  height: 34vh;
+  flex-wrap: wrap;
 }
 
 .sample-image img {
   display: flex;
+  position: relative;
 }
 
 .sample-image .image {
   height: 100%;
-  overflow: hidden;
+  overflow: clip;
 }
 
-.sample-image .image .img:hover {
-  animation-name: top-move;
-  animation-duration: 9s;
+.sample-image .image img:hover {
+  animation-name: image-move;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -282,33 +304,9 @@ header p {
   background-color: red;
 }
 
-@keyframes top-move {
-  0% {
-    position: relative;
-    top: 0;
-  }
-  25% {
-    position: relative;
-    top: -100%;
-  }
-  50% {
-    position: relative;
-    top: -200%;
-  }
-  75% {
-    position: relative;
-    top: -300%;
-  }
-  100% {
-    position: relative;
-    top: -400%;
-  }
-}
-
-@media (min-width: 700px) {
+@media (min-width: 901px) {
   .work__sections {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
   }
   .work__sections .left, .work__sections .right, .work__sections .center {
@@ -317,30 +315,58 @@ header p {
   }
 }
 
+@media (max-width: 900px) and (min-width: 700px) {
+  .work__sections {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+  }
+  .work__sections .left, .work__sections .center {
+    width: 50%;
+    padding: 0 40px;
+  }
+  .work__sections .right {
+    width: 100%;
+    padding: 0 70px;
+  }
+}
+
+@keyframes image-move {
+  0% {
+    top: 0%;
+  }
+  25% {
+    top: -100%;
+  }
+  50% {
+    top: -200%;
+  }
+  75% {
+    top: -300%;
+  }
+  100% {
+    top: -400%;
+  }
+}
+
 .contact {
-  padding: 30px 30px;
+  padding: 70px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url(../../src/pexels-nicolas-postiglioni-421129.jpg);
+  background-image: url(../../src/pexels-nicolas-postiglioni-421129.webp);
   background-size: cover;
   color: white;
-}
-
-.contact h2 {
-  font-family: "Anton", sans-serif;
 }
 
 .contact p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.4;
-  font-family: "Roboto Slab", sans-serif;
   padding-bottom: 30px;
 }
 
 .contact .form {
-  background-image: url(../../src/241b12ed4501adba707a27828f5117a6.jpg);
   background-size: contain;
   max-width: 50vw;
   padding: 20px;
@@ -349,6 +375,8 @@ header p {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  background-color: black;
+  border-color: white;
 }
 
 .contact .form p {

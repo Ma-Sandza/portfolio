@@ -3,20 +3,25 @@
     border: 10px solid rgb(221, 182, 182);
     border-radius: 10px;
     position: relative;
-    height: 40vh;
+    height: 34vh;
+    flex-wrap: wrap;
     img{
         display: flex;
+        position: relative;
     }
     .image{
         height: 100%;
-        overflow: hidden;
-        .img:hover{
-            animation-name: top-move;
-            animation-duration: 9s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
+        overflow: clip;
+        img{
+            &:hover{
+                animation-name: image-move;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
         }
     }
+
     
     .three-buttons{
         display: flex;
@@ -46,37 +51,50 @@
         
     }
 }
-
-@keyframes top-move {
-    0%{
-        position: relative;
-        top: 0;
-    }
-    25%{
-        position: relative;
-        top: -100%;
-    }
-    50%{
-        position: relative;
-        top: -200%;
-    }
-    75%{
-        position: relative;
-        top: -300%;
-    }
-    100%{
-        position: relative;
-        top: -400%;
-    }
-}
-@media (min-width: 700px) {
+@media (min-width: 901px) {
     .work__sections{
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
         .left, .right, .center{
             width: 33%;
             padding: 10px 40px;
         }
     }
+}
+@media (max-width: 900px) and (min-width: 700px) {
+    .work__sections{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        .left, .center{
+            width: 50%;
+            padding: 0 40px;
+        }
+        .right{
+            width: 100%;
+            padding: 0 70px;
+        }
+    }
+}
+
+@keyframes image-move {
+    0% {
+        top: 0%;
+    }
+
+    25% {
+        top: -100%;
+    }
+
+    50% {
+        top: -200%;
+    }
+    75%{
+        top: -300%;
+    }
+    100%{
+        top: -400%;
+    }
+
+
 }

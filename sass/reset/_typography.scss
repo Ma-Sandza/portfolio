@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Kanit&family=Roboto+Slab&display=swap');
+
+$Anto: 'Anton', sans-serif;
+
+$Kanit: 'Kanit', sans-serif;
+
+$Roboto-Slab: 'Roboto Slab', sans-serif;
+
+$Dancing-Script: 'Dancing Script', sans-serif;
+h1,h2,h3{
+    text-align: center;
+}
+#nav a{
+    font-family: $Roboto-Slab;
+}
+
+span, h1{
+    font-family: $Dancing-Script;
+}
+h2{
+    font-family: $Kanit;
+    text-transform: uppercase;
+}
+h3{
+    font-family: $Kanit;
+}
+p{
+    font-family: $Roboto-Slab;
+}
+label{
+    font-family: $Anto;
+}

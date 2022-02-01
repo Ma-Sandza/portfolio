@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&family=Kanit&family=Roboto+Slab&display=swap");
 *, *::after, *::before {
   box-sizing: border-box;
@@ -210,9 +211,9 @@ header p {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   min-height: 100vh;
-  background-image: url(../../src/pexels-pepe-caspers-5411700.webp);
+  background-image: url(../../src/pexels-cátia-matos-1072179.webp);
   background-size: cover;
   background-position: center;
 }
@@ -227,6 +228,7 @@ header p {
   text-align: center;
   font-size: 1.5rem;
   line-height: 1.4;
+  padding-top: 10px;
 }
 
 @media (max-width: 599px) {
@@ -375,6 +377,7 @@ header p {
   background-image: url(../../src/pexels-nicolas-postiglioni-421129.webp);
   background-size: cover;
   color: white;
+  background-color: black;
 }
 
 .contact p {
